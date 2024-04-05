@@ -1,0 +1,6 @@
+Observe this chant 
+
+{chant}
+
+How many times did the user utter  '{input}' in the above chant. 
+Give the exact number in a json format. Don't be too strict or clumsy.

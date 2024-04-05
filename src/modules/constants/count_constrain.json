@@ -1,0 +1,12 @@
+{
+    "name": "set_output_json_format",
+    "parameters": {
+        "type": "object",
+        "properties": {
+              "count":{
+                "type": "string",
+                "description": "Represents the number of times the user has chanted correctly"
+              }
+        }
+    }
+}
