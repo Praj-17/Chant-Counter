@@ -1,5 +1,4 @@
 from fastapi import FastAPI, WebSocket
-import asyncio
 
 app = FastAPI()
 
@@ -9,7 +8,7 @@ async def process_audio_chunk(audio_chunk):
     Replace this with your actual audio processing logic.
     """
     # Simulate asynchronous processing of audio chunk
-    await asyncio.sleep(0.1)  # Simulating processing delay
+    print("Audio chunk recieved")
     return f"Processed {len(audio_chunk)} bytes"
 
 @app.websocket("/ws/audio")
