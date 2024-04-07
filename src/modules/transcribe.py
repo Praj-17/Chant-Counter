@@ -2,7 +2,7 @@
 import  whisper_timestamped as whisper
 import os
 from dotenv import load_dotenv
-from src.modules.AudioNormalizer import AudioNormalizer
+from .AudioNormalizer import AudioNormalizer
 import numpy as np
 import whisper
 from scipy.io.wavfile import write

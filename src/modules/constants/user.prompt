@@ -3,4 +3,4 @@ Observe this chant
 {chant}
 
 How many times did the user utter  '{input}' in the above chant. 
-Give the exact number in a json format. Don't be too strict or clumsy.
+Give the exact number in a json format. You will be provided with what a mantra would look like, You have to count how many times did he chant the same mantra. Some minor mistakes while chanting are fine dont be too strict or too clumsy. If there is no correct chant return 0

@@ -25,6 +25,7 @@ class ChantCounter:
             self.constrain = json.load(json_file)
         self.fo = FileOrganizer()
     def run_openai(self, user_prompt,functions = []):
+        response = """{"count":0}"""
         completion = client.chat.completions.create(
         model = os.getenv("model_name"),
         temperature = float(os.getenv("temperature")),
@@ -33,13 +34,16 @@ class ChantCounter:
             "role": "user", "content":user_prompt}],
             functions=functions
         )
-        nep_question = completion.choices[0].message.function_call.arguments
+        try:
+            response = completion.choices[0].message.function_call.arguments
+        except Exception as e:
+            print("Exception in detecting")
 
-        return json.loads(nep_question)
+        return json.loads(response)
     def count_chants(self, input, chant):
         with open(self.user_prompt, "r") as f:
             prompt = f.read()
-            prompt = prompt.format(input = input, chant = chant)
+            prompt = prompt.format(input = input.strip(), chant = chant.strip())
             f.close()
         return self.run_openai(user_prompt=prompt, functions = [self.constrain])
 
