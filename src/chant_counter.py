@@ -1,6 +1,6 @@
-from modules import TrascribeSRT
-from modules import ChantCounter
-from modules import AudioUnderstandingGemini
+from src.modules import TrascribeSRT
+from src.modules import ChantCounter
+from src.modules import AudioUnderstandingGemini
 
 
 
@@ -14,6 +14,12 @@ class CountChantsFromAudio:
         input_transcription = self.transcriber.transcribe(input_audio)
         chant_transcription = self.transcriber.transcribe(chant_audio)
         return  self.counter.count_chants(input=input_transcription["text"], chant=chant_transcription["text"])
+    def count_chants_gemini(self, input_audio, chant_audio):
+        return self.gemini.count_chants(input_audio, chant_audio)
+
+class CountChantsFromAudioGemini:
+    def __init__(self) -> None:
+        self.gemini = AudioUnderstandingGemini()
     def count_chants_gemini(self, input_audio, chant_audio):
         return self.gemini.count_chants(input_audio, chant_audio)
 
