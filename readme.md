@@ -37,7 +37,7 @@ pip  install -r requirements.txt
 Run the following command to start the FASTAPI server
 
 ```
-uvicorn websocket_audio_server:app --reload
+uvicorn app:app --reload
 ```
 
 ## API Documentation
