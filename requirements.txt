@@ -68,3 +68,4 @@ urllib3==2.2.1
 wheel==0.41.2
 whisper==1.1.10
 whisper-timestamped==1.15.3
+google-generativeai

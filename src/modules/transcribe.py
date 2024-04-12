@@ -1,14 +1,14 @@
 
 import  whisper_timestamped as whisper
 import os
-from dotenv import load_dotenv
+
 from .AudioNormalizer import AudioNormalizer
 import numpy as np
 import whisper
 from scipy.io.wavfile import write
 import tempfile
 import os
-
+from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
