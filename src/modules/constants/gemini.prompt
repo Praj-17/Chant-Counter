@@ -1,1 +1,1 @@
-Listen carefully to the following audio file. How many time did the input mantra occur in the chant? Return only the count and absolutely nothing else"
+Listen carefully to the following audio file. How many time did the input mantra occur in the chant? If the mantra is partiall wait for the next audio to come and see if the remaining part is present in it, and count it if it does. Return only the count as a number and absolutely nothing else as text
